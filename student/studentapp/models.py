@@ -21,7 +21,7 @@ class Subject(models.Model):
     name = models.CharField(max_length=50, blank=False, null=False, unique=True)
 
     def __str__(self):
-        return self.name
+        return   self.name
 
 
 class Student(models.Model):
