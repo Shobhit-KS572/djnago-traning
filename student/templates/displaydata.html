@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display</title>
+  <style>
+      #tabstyle {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 30px;
+      }
+  </style>
+</head>
+
+<body id='tabstyle'>
+
+  <table class="table table-striped">
+    <tr>
+      <th>Name</th>
+      <th>DOB</th>
+      <th>Address</th>
+      <th>Email</th>
+      <th>School</th>
+      <th>Class</th>
+      <th>Password</th>
+      <th>Subject</th>
+      <th>Fees</th>
+    </tr>
+    <tbody>
+      {% for item in results %}
+
+      <tr>
+        <td>{{item.student_name}}</td>
+        <td>{{item.student_dob}}</td>
+        <td>{{item.address}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.school}}</td>
+        <td>{{item.class_id}}</td>
+        <td>{{item.password}}</td>
+        <td>{{item.subject}}</td>
+        <td>{{item.fees}}</td>
+      </tr>
+
+      {% endfor %}
+
+    </tbody>
+  </table>
+</body>
+
+</html>
